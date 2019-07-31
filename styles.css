@@ -53,6 +53,6 @@ html, body {
 }
 
 @keyframes change-shape {
-    from {left:15px; top:195px; transform: rotate(90deg); border: 1px dashed rgba(9, 0, 189, 1); background:rgb(243,237,237); opacity:0;}
-    to {left:443px; top:443px; width:150px; height: 150px; border-radius: 75px; border: rgba(9, 0, 189, 0); background: radial-gradient(rgba(251, 218, 97, 1),rgba(247, 107, 28, 1)); opacity:1;}
+    from {left:15px; top:195px; transform: rotate(90deg); border: 1px dashed rgba(9, 0, 189, 1); background:rgb(243,237,237);}
+    to {left:443px; top:443px; width:150px; height: 150px; border-radius: 75px; border: rgba(9, 0, 189, 0); background: radial-gradient(rgba(251, 218, 97, 1),rgba(247, 107, 28, 1));}
 }
