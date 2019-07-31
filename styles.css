@@ -8,7 +8,51 @@
 
 html, body {
     width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------------- main styling ----------------------- */
+
+#stage {
+    background:url(./images/css_animation_exercise_stage.png) center center no-repeat;
+    height: 600px;
+    width: 600px;
+    padding: 5px;
+    position: relative;
+}
+
+#hero {
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border: 1px dashed red;
+    left: 15px;
+    top: 15px;
+    animation: move-right 5s forwards, move-down 2s 5s forwards, left-and-turn 5s 7s forwards, change-shape 5s 12s forwards;  
+}
+
+@keyframes move-right {
+    from {left:15px;}
+    to {left:510px} /* space right left: 15 px, size of shape 75px */
+}
+
+@keyframes move-down {
+    from {top:15px;}
+    to {top: 195px;}
+}
+
+@keyframes left-and-turn {
+    0% {left:510px; transform: rotate(0deg);border: 1px dashed red}
+    10% {left:255px; transform: rotate(45deg);border: 1px dashed red}
+    50% {left:255px;transform: rotate(45deg);border: 1px dashed red}
+    100% {left:15px; transform: rotate(90deg); border: 1px dashed #0900bd}
+}
+
+@keyframes change-shape {
+    from {left:15px; top:195px; transform: rotate(90deg); border: 1px dashed rgba(9, 0, 189, 1); background:rgb(243,237,237); opacity:0;}
+    to {left:443px; top:443px; width:150px; height: 150px; border-radius: 75px; border: rgba(9, 0, 189, 0); background: radial-gradient(rgba(251, 218, 97, 1),rgba(247, 107, 28, 1)); opacity:1;}
+}
